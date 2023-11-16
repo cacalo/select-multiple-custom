@@ -82,3 +82,50 @@ select{
     outline: unset;
   }
 }
+
+/* Dropdown custom */
+
+#toggleElementos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: unset;
+  border-bottom: 2px solid gray;
+  background-color: unset;
+
+  & img{
+    height: 15px;
+    transition: 100ms ease-in-out;
+  }
+}
+
+#elementosOpcionesContainer:popover-open+button{
+  border-bottom: 2px solid var(--color-principal);
+  & img{
+    rotate: -180deg;
+  }
+}
+
+#elementosOpcionesContainer{
+  top: anchor(bottom);
+  left: anchor(left);
+  right: anchor(right);
+  width: auto;
+  padding: 0;
+
+  & *{
+    cursor: pointer;
+  }
+
+  & div{
+    display: flex;
+    gap: 0.5rem;
+    
+    & label{
+      width: 100%;
+    }
+  }
+  & :hover{
+    background-color: var(--color-principal);
+  }
+}

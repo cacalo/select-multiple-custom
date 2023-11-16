@@ -17,12 +17,12 @@
 			<label for="email">EMAIL</label>
 			<input type="email" name="email" id="email">
 			<label for="productos">PRODUCTOS</label>
-			<select name="productos" id="productos">
-				<option>Monociclo</option>
-				<option>Bicicleta</option>
-				<option>Triciclo</option>
-				<option>Cuatriciclo</option>
-			</select>
+			<div popover id="elementosOpcionesContainer" anchor="toggleElementos">
+			</div>
+			<button id="toggleElementos" popovertarget="elementosOpcionesContainer" type="button">
+				<span id="mensajeListaPersonalizada">Seleccionar productos</span>
+				<img src="./img/chevron-down-solid.svg">
+			</button>
 			<button type="submit">Suscribirse</button>
 		</form>
 	</div>
